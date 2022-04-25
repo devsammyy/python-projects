@@ -4,7 +4,7 @@ guessesTaken = 0
 
 name = input("Enter your name: ")
 
-number = random.randint(1, 20)
+number = random.randint(1, 100)
 
 print(f"Well {name} I think of a number between 1 and 20")
 
