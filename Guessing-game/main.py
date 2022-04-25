@@ -1,30 +1,34 @@
 import random
 
-guessesTaken = 0
+def guessingGame():
 
-name = input("Enter your name: ")
+    guessesTaken = 0
 
-number = random.randint(1, 100)
+    name = input("Enter your name: ")
 
-print(f"Well {name} I think of a number between 1 and 20")
+    number = random.randint(1, 100)
 
-for guessesTaken in range(6):
-    print("Take a guess.")
-    guess = int(input("Enter guess: "))
+    print(f"Well {name} I think of a number between 1 and 20")
 
-    if guess < number:
-        print("Your guess is too low")
+    for guessesTaken in range(6):
+        print("Take a guess.")
+        guess = int(input("Enter guess: "))
 
-    if guess > number:
-        print("Your guess is too high")
+        if guess < number:
+            print("Your guess is too low")
+
+        if guess > number:
+            print("Your guess is too high")
+
+        if guess == number:
+            break
 
     if guess == number:
-        break
+        guessesTaken = str(guessesTaken + 1)
+        print(f"Good job! {name} Your guessed my number in {guessesTaken} guesses.")
 
-if guess == number:
-    guessesTaken = str(guessesTaken + 1)
-    print(f"Good job! {name} Your guessed my number in {guessesTaken} guesses.")
+    if guess != number:
+        number = str(number)
+        print(f"Nah the number I was thinking of is {number}.")
 
-if guess != number:
-    number = str(number)
-    print(f"Nah the number I was thinking of is {number}.")
+guessingGame()
