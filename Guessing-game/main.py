@@ -1,6 +1,7 @@
 import random
 
-def guessingGame():
+
+def main():
 
     guessesTaken = 0
 
@@ -31,4 +32,4 @@ def guessingGame():
         number = str(number)
         print(f"Nah the number I was thinking of is {number}.")
 
-guessingGame()
+main()
